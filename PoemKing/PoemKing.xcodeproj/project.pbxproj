@@ -1,0 +1,800 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2F413F5B9EF480ACAABB1121 /* libPods-PoemKingTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 468F8A6EFEFA9A99A3DAB244 /* libPods-PoemKingTests.a */; };
+		30B41F116510E6EB80F70D1E /* libPods-PoemKingUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C44FCF20097B0FACED4E695 /* libPods-PoemKingUITests.a */; };
+		CDA046010EB62E9A9435CD9B /* libPods-PoemKing.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F5E998A634D5420EAE740224 /* libPods-PoemKing.a */; };
+		FE28BF19216F27A500CA885B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FE28BF18216F27A500CA885B /* AppDelegate.m */; };
+		FE28BF1F216F27A500CA885B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE28BF1D216F27A500CA885B /* Main.storyboard */; };
+		FE28BF21216F27A900CA885B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FE28BF20216F27A900CA885B /* Assets.xcassets */; };
+		FE28BF24216F27A900CA885B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE28BF22216F27A900CA885B /* LaunchScreen.storyboard */; };
+		FE28BF27216F27A900CA885B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FE28BF26216F27A900CA885B /* main.m */; };
+		FE28BF31216F27A900CA885B /* PoemKingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FE28BF30216F27A900CA885B /* PoemKingTests.m */; };
+		FE28BF3C216F27A900CA885B /* PoemKingUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = FE28BF3B216F27A900CA885B /* PoemKingUITests.m */; };
+		FE28BF4D216F2BED00CA885B /* MainTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = FE28BF4C216F2BED00CA885B /* MainTabBarController.m */; };
+		FE28BF83216F594400CA885B /* LatinMarkView.m in Sources */ = {isa = PBXBuildFile; fileRef = FE28BF82216F594400CA885B /* LatinMarkView.m */; };
+		FEA53395218C1C4B00B09A2B /* WCDB_Contact.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = FEA53394218C1C4B00B09A2B /* WCDB_Contact.sqlite */; };
+		FEA53398218C1C8000B09A2B /* SqliteManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FEA53397218C1C8000B09A2B /* SqliteManager.m */; };
+		FEA5339C218C26D500B09A2B /* WXContacts.m in Sources */ = {isa = PBXBuildFile; fileRef = FEA5339B218C26D500B09A2B /* WXContacts.m */; };
+		FEA5339F218C286F00B09A2B /* BinaryDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FEA5339E218C286F00B09A2B /* BinaryDataManager.m */; };
+		FEE0BFC6218FF08800CE88CD /* RecoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FEE0BFC5218FF08800CE88CD /* RecoverViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FE28BF2D216F27A900CA885B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FE28BF0C216F27A500CA885B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FE28BF13216F27A500CA885B;
+			remoteInfo = PoemKing;
+		};
+		FE28BF38216F27A900CA885B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FE28BF0C216F27A500CA885B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FE28BF13216F27A500CA885B;
+			remoteInfo = PoemKing;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		14972E9F3997FA2F50E3D48F /* Pods-PoemKingTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PoemKingTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PoemKingTests/Pods-PoemKingTests.debug.xcconfig"; sourceTree = "<group>"; };
+		2C44FCF20097B0FACED4E695 /* libPods-PoemKingUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PoemKingUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3BB4D0E24415C95B40DFA612 /* Pods-PoemKingUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PoemKingUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PoemKingUITests/Pods-PoemKingUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		468F8A6EFEFA9A99A3DAB244 /* libPods-PoemKingTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PoemKingTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9EACAA6A2F91B09D34882563 /* Pods-PoemKing.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PoemKing.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PoemKing/Pods-PoemKing.debug.xcconfig"; sourceTree = "<group>"; };
+		B1897D8B5E6C6CE2163122CE /* Pods-PoemKingTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PoemKingTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PoemKingTests/Pods-PoemKingTests.release.xcconfig"; sourceTree = "<group>"; };
+		C33912C4A3C46A6F451E87C0 /* Pods-PoemKing.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PoemKing.release.xcconfig"; path = "Pods/Target Support Files/Pods-PoemKing/Pods-PoemKing.release.xcconfig"; sourceTree = "<group>"; };
+		F5E998A634D5420EAE740224 /* libPods-PoemKing.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PoemKing.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F9A6FB6BB81046A4A0D61E0C /* Pods-PoemKingUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PoemKingUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PoemKingUITests/Pods-PoemKingUITests.release.xcconfig"; sourceTree = "<group>"; };
+		FE28BF14216F27A500CA885B /* PoemKing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PoemKing.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FE28BF17216F27A500CA885B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		FE28BF18216F27A500CA885B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		FE28BF1E216F27A500CA885B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		FE28BF20216F27A900CA885B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FE28BF23216F27A900CA885B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		FE28BF25216F27A900CA885B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FE28BF26216F27A900CA885B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		FE28BF2C216F27A900CA885B /* PoemKingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PoemKingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FE28BF30216F27A900CA885B /* PoemKingTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PoemKingTests.m; sourceTree = "<group>"; };
+		FE28BF32216F27A900CA885B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FE28BF37216F27A900CA885B /* PoemKingUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PoemKingUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FE28BF3B216F27A900CA885B /* PoemKingUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PoemKingUITests.m; sourceTree = "<group>"; };
+		FE28BF3D216F27A900CA885B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FE28BF4B216F2BED00CA885B /* MainTabBarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainTabBarController.h; sourceTree = "<group>"; };
+		FE28BF4C216F2BED00CA885B /* MainTabBarController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainTabBarController.m; sourceTree = "<group>"; };
+		FE28BF81216F594400CA885B /* LatinMarkView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LatinMarkView.h; sourceTree = "<group>"; };
+		FE28BF82216F594400CA885B /* LatinMarkView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LatinMarkView.m; sourceTree = "<group>"; };
+		FEA53394218C1C4B00B09A2B /* WCDB_Contact.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = WCDB_Contact.sqlite; sourceTree = "<group>"; };
+		FEA53396218C1C8000B09A2B /* SqliteManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SqliteManager.h; sourceTree = "<group>"; };
+		FEA53397218C1C8000B09A2B /* SqliteManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SqliteManager.m; sourceTree = "<group>"; };
+		FEA5339A218C26D500B09A2B /* WXContacts.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WXContacts.h; sourceTree = "<group>"; };
+		FEA5339B218C26D500B09A2B /* WXContacts.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WXContacts.m; sourceTree = "<group>"; };
+		FEA5339D218C286F00B09A2B /* BinaryDataManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BinaryDataManager.h; sourceTree = "<group>"; };
+		FEA5339E218C286F00B09A2B /* BinaryDataManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BinaryDataManager.m; sourceTree = "<group>"; };
+		FEE0BFC4218FF08800CE88CD /* RecoverViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RecoverViewController.h; sourceTree = "<group>"; };
+		FEE0BFC5218FF08800CE88CD /* RecoverViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RecoverViewController.m; sourceTree = "<group>"; };
+		FEE0BFC7219022CA00CE88CD /* PoemKing.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PoemKing.pch; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FE28BF11216F27A500CA885B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CDA046010EB62E9A9435CD9B /* libPods-PoemKing.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FE28BF29216F27A900CA885B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2F413F5B9EF480ACAABB1121 /* libPods-PoemKingTests.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FE28BF34216F27A900CA885B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				30B41F116510E6EB80F70D1E /* libPods-PoemKingUITests.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7A5E871009076568DABDE7DA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F5E998A634D5420EAE740224 /* libPods-PoemKing.a */,
+				468F8A6EFEFA9A99A3DAB244 /* libPods-PoemKingTests.a */,
+				2C44FCF20097B0FACED4E695 /* libPods-PoemKingUITests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		81B7BFC6325476DC88DB2868 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9EACAA6A2F91B09D34882563 /* Pods-PoemKing.debug.xcconfig */,
+				C33912C4A3C46A6F451E87C0 /* Pods-PoemKing.release.xcconfig */,
+				14972E9F3997FA2F50E3D48F /* Pods-PoemKingTests.debug.xcconfig */,
+				B1897D8B5E6C6CE2163122CE /* Pods-PoemKingTests.release.xcconfig */,
+				3BB4D0E24415C95B40DFA612 /* Pods-PoemKingUITests.debug.xcconfig */,
+				F9A6FB6BB81046A4A0D61E0C /* Pods-PoemKingUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		FE28BF0B216F27A500CA885B = {
+			isa = PBXGroup;
+			children = (
+				FEA53394218C1C4B00B09A2B /* WCDB_Contact.sqlite */,
+				FEE0BFC7219022CA00CE88CD /* PoemKing.pch */,
+				FE28BF16216F27A500CA885B /* PoemKing */,
+				FE28BF2F216F27A900CA885B /* PoemKingTests */,
+				FE28BF3A216F27A900CA885B /* PoemKingUITests */,
+				FE28BF15216F27A500CA885B /* Products */,
+				81B7BFC6325476DC88DB2868 /* Pods */,
+				7A5E871009076568DABDE7DA /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		FE28BF15216F27A500CA885B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FE28BF14216F27A500CA885B /* PoemKing.app */,
+				FE28BF2C216F27A900CA885B /* PoemKingTests.xctest */,
+				FE28BF37216F27A900CA885B /* PoemKingUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FE28BF16216F27A500CA885B /* PoemKing */ = {
+			isa = PBXGroup;
+			children = (
+				FEA53399218C26C000B09A2B /* Model */,
+				FE28BF4A216F2B5600CA885B /* Tools */,
+				FE28BF49216F2B4300CA885B /* View */,
+				FE28BF17216F27A500CA885B /* AppDelegate.h */,
+				FE28BF18216F27A500CA885B /* AppDelegate.m */,
+				FE28BF20216F27A900CA885B /* Assets.xcassets */,
+				FE28BF22216F27A900CA885B /* LaunchScreen.storyboard */,
+				FE28BF25216F27A900CA885B /* Info.plist */,
+				FE28BF26216F27A900CA885B /* main.m */,
+			);
+			path = PoemKing;
+			sourceTree = "<group>";
+		};
+		FE28BF2F216F27A900CA885B /* PoemKingTests */ = {
+			isa = PBXGroup;
+			children = (
+				FE28BF30216F27A900CA885B /* PoemKingTests.m */,
+				FE28BF32216F27A900CA885B /* Info.plist */,
+			);
+			path = PoemKingTests;
+			sourceTree = "<group>";
+		};
+		FE28BF3A216F27A900CA885B /* PoemKingUITests */ = {
+			isa = PBXGroup;
+			children = (
+				FE28BF3B216F27A900CA885B /* PoemKingUITests.m */,
+				FE28BF3D216F27A900CA885B /* Info.plist */,
+			);
+			path = PoemKingUITests;
+			sourceTree = "<group>";
+		};
+		FE28BF49216F2B4300CA885B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FE28BF80216F58F500CA885B /* CustomView */,
+				FE28BF51216F3F9C00CA885B /* Find */,
+				FE28BF50216F3F8D00CA885B /* Activity */,
+				FE28BF4F216F3F7500CA885B /* Home */,
+				FE28BF4E216F3F6700CA885B /* Me */,
+				FE28BF1D216F27A500CA885B /* Main.storyboard */,
+				FE28BF4B216F2BED00CA885B /* MainTabBarController.h */,
+				FE28BF4C216F2BED00CA885B /* MainTabBarController.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FE28BF4A216F2B5600CA885B /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				FEA53396218C1C8000B09A2B /* SqliteManager.h */,
+				FEA53397218C1C8000B09A2B /* SqliteManager.m */,
+				FEA5339D218C286F00B09A2B /* BinaryDataManager.h */,
+				FEA5339E218C286F00B09A2B /* BinaryDataManager.m */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
+		FE28BF4E216F3F6700CA885B /* Me */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Me;
+			sourceTree = "<group>";
+		};
+		FE28BF4F216F3F7500CA885B /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				FEE0BFC4218FF08800CE88CD /* RecoverViewController.h */,
+				FEE0BFC5218FF08800CE88CD /* RecoverViewController.m */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		FE28BF50216F3F8D00CA885B /* Activity */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Activity;
+			sourceTree = "<group>";
+		};
+		FE28BF51216F3F9C00CA885B /* Find */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Find;
+			sourceTree = "<group>";
+		};
+		FE28BF80216F58F500CA885B /* CustomView */ = {
+			isa = PBXGroup;
+			children = (
+				FE28BF81216F594400CA885B /* LatinMarkView.h */,
+				FE28BF82216F594400CA885B /* LatinMarkView.m */,
+			);
+			path = CustomView;
+			sourceTree = "<group>";
+		};
+		FEA53399218C26C000B09A2B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FEA5339A218C26D500B09A2B /* WXContacts.h */,
+				FEA5339B218C26D500B09A2B /* WXContacts.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FE28BF13216F27A500CA885B /* PoemKing */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FE28BF40216F27A900CA885B /* Build configuration list for PBXNativeTarget "PoemKing" */;
+			buildPhases = (
+				60CBB5AB5580614A942878FC /* [CP] Check Pods Manifest.lock */,
+				FE28BF10216F27A500CA885B /* Sources */,
+				FE28BF11216F27A500CA885B /* Frameworks */,
+				FE28BF12216F27A500CA885B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PoemKing;
+			productName = PoemKing;
+			productReference = FE28BF14216F27A500CA885B /* PoemKing.app */;
+			productType = "com.apple.product-type.application";
+		};
+		FE28BF2B216F27A900CA885B /* PoemKingTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FE28BF43216F27A900CA885B /* Build configuration list for PBXNativeTarget "PoemKingTests" */;
+			buildPhases = (
+				17E4655A97B2D3C59CCFF43D /* [CP] Check Pods Manifest.lock */,
+				FE28BF28216F27A900CA885B /* Sources */,
+				FE28BF29216F27A900CA885B /* Frameworks */,
+				FE28BF2A216F27A900CA885B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FE28BF2E216F27A900CA885B /* PBXTargetDependency */,
+			);
+			name = PoemKingTests;
+			productName = PoemKingTests;
+			productReference = FE28BF2C216F27A900CA885B /* PoemKingTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		FE28BF36216F27A900CA885B /* PoemKingUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FE28BF46216F27A900CA885B /* Build configuration list for PBXNativeTarget "PoemKingUITests" */;
+			buildPhases = (
+				E0E4BACF88FA02AC525B54E9 /* [CP] Check Pods Manifest.lock */,
+				FE28BF33216F27A900CA885B /* Sources */,
+				FE28BF34216F27A900CA885B /* Frameworks */,
+				FE28BF35216F27A900CA885B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FE28BF39216F27A900CA885B /* PBXTargetDependency */,
+			);
+			name = PoemKingUITests;
+			productName = PoemKingUITests;
+			productReference = FE28BF37216F27A900CA885B /* PoemKingUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FE28BF0C216F27A500CA885B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1000;
+				ORGANIZATIONNAME = "Leon Guo";
+				TargetAttributes = {
+					FE28BF13216F27A500CA885B = {
+						CreatedOnToolsVersion = 10.0;
+					};
+					FE28BF2B216F27A900CA885B = {
+						CreatedOnToolsVersion = 10.0;
+						TestTargetID = FE28BF13216F27A500CA885B;
+					};
+					FE28BF36216F27A900CA885B = {
+						CreatedOnToolsVersion = 10.0;
+						TestTargetID = FE28BF13216F27A500CA885B;
+					};
+				};
+			};
+			buildConfigurationList = FE28BF0F216F27A500CA885B /* Build configuration list for PBXProject "PoemKing" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FE28BF0B216F27A500CA885B;
+			productRefGroup = FE28BF15216F27A500CA885B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FE28BF13216F27A500CA885B /* PoemKing */,
+				FE28BF2B216F27A900CA885B /* PoemKingTests */,
+				FE28BF36216F27A900CA885B /* PoemKingUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FE28BF12216F27A500CA885B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FE28BF24216F27A900CA885B /* LaunchScreen.storyboard in Resources */,
+				FE28BF21216F27A900CA885B /* Assets.xcassets in Resources */,
+				FEA53395218C1C4B00B09A2B /* WCDB_Contact.sqlite in Resources */,
+				FE28BF1F216F27A500CA885B /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FE28BF2A216F27A900CA885B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FE28BF35216F27A900CA885B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		17E4655A97B2D3C59CCFF43D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PoemKingTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		60CBB5AB5580614A942878FC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PoemKing-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E0E4BACF88FA02AC525B54E9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PoemKingUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FE28BF10216F27A500CA885B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FEA5339F218C286F00B09A2B /* BinaryDataManager.m in Sources */,
+				FE28BF27216F27A900CA885B /* main.m in Sources */,
+				FE28BF83216F594400CA885B /* LatinMarkView.m in Sources */,
+				FEA53398218C1C8000B09A2B /* SqliteManager.m in Sources */,
+				FE28BF4D216F2BED00CA885B /* MainTabBarController.m in Sources */,
+				FE28BF19216F27A500CA885B /* AppDelegate.m in Sources */,
+				FEA5339C218C26D500B09A2B /* WXContacts.m in Sources */,
+				FEE0BFC6218FF08800CE88CD /* RecoverViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FE28BF28216F27A900CA885B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FE28BF31216F27A900CA885B /* PoemKingTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FE28BF33216F27A900CA885B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FE28BF3C216F27A900CA885B /* PoemKingUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FE28BF2E216F27A900CA885B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FE28BF13216F27A500CA885B /* PoemKing */;
+			targetProxy = FE28BF2D216F27A900CA885B /* PBXContainerItemProxy */;
+		};
+		FE28BF39216F27A900CA885B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FE28BF13216F27A500CA885B /* PoemKing */;
+			targetProxy = FE28BF38216F27A900CA885B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		FE28BF1D216F27A500CA885B /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FE28BF1E216F27A500CA885B /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		FE28BF22216F27A900CA885B /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FE28BF23216F27A900CA885B /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FE28BF3E216F27A900CA885B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/PoemKing.pch ";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		FE28BF3F216F27A900CA885B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/PoemKing.pch ";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FE28BF41216F27A900CA885B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9EACAA6A2F91B09D34882563 /* Pods-PoemKing.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7223F8XS5L;
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				GCC_PREFIX_HEADER = "";
+				INFOPLIST_FILE = PoemKing/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.Bathroom.PoemKing;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		FE28BF42216F27A900CA885B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C33912C4A3C46A6F451E87C0 /* Pods-PoemKing.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7223F8XS5L;
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				GCC_PREFIX_HEADER = "";
+				INFOPLIST_FILE = PoemKing/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.Bathroom.PoemKing;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		FE28BF44216F27A900CA885B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 14972E9F3997FA2F50E3D48F /* Pods-PoemKingTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7223F8XS5L;
+				INFOPLIST_FILE = PoemKingTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.Bathroom.PoemKingTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PoemKing.app/PoemKing";
+			};
+			name = Debug;
+		};
+		FE28BF45216F27A900CA885B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B1897D8B5E6C6CE2163122CE /* Pods-PoemKingTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7223F8XS5L;
+				INFOPLIST_FILE = PoemKingTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.Bathroom.PoemKingTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PoemKing.app/PoemKing";
+			};
+			name = Release;
+		};
+		FE28BF47216F27A900CA885B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3BB4D0E24415C95B40DFA612 /* Pods-PoemKingUITests.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7223F8XS5L;
+				INFOPLIST_FILE = PoemKingUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.Bathroom.PoemKingUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = PoemKing;
+			};
+			name = Debug;
+		};
+		FE28BF48216F27A900CA885B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F9A6FB6BB81046A4A0D61E0C /* Pods-PoemKingUITests.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7223F8XS5L;
+				INFOPLIST_FILE = PoemKingUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.Bathroom.PoemKingUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = PoemKing;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FE28BF0F216F27A500CA885B /* Build configuration list for PBXProject "PoemKing" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FE28BF3E216F27A900CA885B /* Debug */,
+				FE28BF3F216F27A900CA885B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FE28BF40216F27A900CA885B /* Build configuration list for PBXNativeTarget "PoemKing" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FE28BF41216F27A900CA885B /* Debug */,
+				FE28BF42216F27A900CA885B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FE28BF43216F27A900CA885B /* Build configuration list for PBXNativeTarget "PoemKingTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FE28BF44216F27A900CA885B /* Debug */,
+				FE28BF45216F27A900CA885B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FE28BF46216F27A900CA885B /* Build configuration list for PBXNativeTarget "PoemKingUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FE28BF47216F27A900CA885B /* Debug */,
+				FE28BF48216F27A900CA885B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FE28BF0C216F27A500CA885B /* Project object */;
+}

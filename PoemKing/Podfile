@@ -1,0 +1,24 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+
+target 'PoemKing' do
+  
+  #use_frameworks!
+  pod 'FMDB'  
+  pod 'SDWebImage', '~> 4.0'
+  pod 'Masonry'
+  pod 'DZNEmptyDataSet'
+
+  # Pods for PoemKing
+
+  target 'PoemKingTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+  target 'PoemKingUITests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+end
