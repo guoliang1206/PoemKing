@@ -9,6 +9,9 @@
 #import "RecoverViewController.h"
 #import "UIScrollView+EmptyDataSet.h"
 #import "Masonry.h"
+#import "AddFileViewController.h"
+#import "BackupFileListCell.h"
+
 
 @interface RecoverViewController ()<DZNEmptyDataSetSource, DZNEmptyDataSetDelegate, UITableViewDataSource, UITableViewDelegate>
 
@@ -19,6 +22,13 @@
 
 @implementation RecoverViewController
 
+-(NSMutableArray *)dataSource{
+    if(!_dataSource){
+        _dataSource = [NSMutableArray arrayWithCapacity:0];
+    }
+    return _dataSource;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
@@ -26,8 +36,13 @@
     self.tableview.emptyDataSetSource = self;
     self.tableview.emptyDataSetDelegate = self;
     self.tableview.tableFooterView = [UIView new];
+    self.tableview.dataSource = self;
+    self.tableview.delegate = self;
     
-   
+    [self.tableview registerNib:[UINib nibWithNibName:@"BackupFileListCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:@"BackupFileListCell"];
+    
+    
+    [self.tableview reloadData];
     
 }
 
@@ -41,7 +56,6 @@
 - (UIView *)customViewForEmptyDataSet:(UIScrollView *)scrollView{
     
     UIView * bgview = [[UIView alloc] init];
-    bgview.backgroundColor = [UIColor purpleColor];
     [self.tableview addSubview:bgview];
     
     UIEdgeInsets padding = UIEdgeInsetsMake(0, 0, 0, 0);
@@ -51,21 +65,26 @@
   
     
     NSString *text = @"请添加备份文件";
-
-    NSDictionary * attributes = @{NSFontAttributeName:[UIFont boldSystemFontOfSize:18.0f],
-                                  NSForegroundColorAttributeName:[UIColor darkGrayColor]};
+    NSDictionary * attributes = @{NSFontAttributeName:[UIFont boldSystemFontOfSize:18.0f],NSForegroundColorAttributeName:[UIColor darkGrayColor]};
     NSAttributedString *title = [[NSAttributedString alloc] initWithString:text attributes:attributes];
     
     UILabel *titleLable = [[UILabel alloc] init];
     [titleLable setAttributedText:title];
     [bgview addSubview:titleLable];
     
+    
     [titleLable mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.edges.equalTo(bgview).width.insets(padding);
+        
     }];
     
     
     return bgview;
+}
+
+- (void)emptyDataSet:(UIScrollView *)scrollView didTapView:(UIView *)view
+{
+    [self.navigationController pushViewController:[AddFileViewController new] animated:YES];
+    NSLog(@"View Taped !!!");
 }
 
 
@@ -76,7 +95,9 @@
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"RecoverFileCell" forIndexPath:indexPath];
+    
+    BackupFileListCell *cell = [tableView dequeueReusableCellWithIdentifier:@"BackupFileListCell" forIndexPath:indexPath];
+    
     return cell;
 }
 
