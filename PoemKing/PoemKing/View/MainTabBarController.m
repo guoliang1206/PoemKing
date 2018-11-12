@@ -8,7 +8,7 @@
 
 #import "MainTabBarController.h"
 #import "SqliteManager.h"
-#import "BinaryDataManager.h";
+#import "BinaryDataManager.h"
 #import "WXContacts.h"
 
 
