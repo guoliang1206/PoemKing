@@ -27,8 +27,6 @@
 		FEE0BFCA21904D0E00CE88CD /* AddFileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FEE0BFC921904D0E00CE88CD /* AddFileViewController.m */; };
 		FEE0BFE5219183BE00CE88CD /* BackupFileListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FEE0BFE3219183BE00CE88CD /* BackupFileListCell.m */; };
 		FEE0BFE6219183BE00CE88CD /* BackupFileListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FEE0BFE4219183BE00CE88CD /* BackupFileListCell.xib */; };
-		FEE0BFE92191879600CE88CD /* MeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FEE0BFE82191879600CE88CD /* MeViewController.m */; };
-		FEE0BFEC2192928E00CE88CD /* JZLocationConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = FEE0BFEB2192928D00CE88CD /* JZLocationConverter.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -91,10 +89,6 @@
 		FEE0BFE2219183BE00CE88CD /* BackupFileListCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BackupFileListCell.h; sourceTree = "<group>"; };
 		FEE0BFE3219183BE00CE88CD /* BackupFileListCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BackupFileListCell.m; sourceTree = "<group>"; };
 		FEE0BFE4219183BE00CE88CD /* BackupFileListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BackupFileListCell.xib; sourceTree = "<group>"; };
-		FEE0BFE72191879600CE88CD /* MeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MeViewController.h; sourceTree = "<group>"; };
-		FEE0BFE82191879600CE88CD /* MeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MeViewController.m; sourceTree = "<group>"; };
-		FEE0BFEA2192928500CE88CD /* JZLocationConverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JZLocationConverter.h; sourceTree = "<group>"; };
-		FEE0BFEB2192928D00CE88CD /* JZLocationConverter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JZLocationConverter.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,8 +147,6 @@
 			children = (
 				FEA53394218C1C4B00B09A2B /* WCDB_Contact.sqlite */,
 				FEE0BFC7219022CA00CE88CD /* PoemKing.pch */,
-				FEE0BFEA2192928500CE88CD /* JZLocationConverter.h */,
-				FEE0BFEB2192928D00CE88CD /* JZLocationConverter.m */,
 				FE28BF16216F27A500CA885B /* PoemKing */,
 				FE28BF2F216F27A900CA885B /* PoemKingTests */,
 				FE28BF3A216F27A900CA885B /* PoemKingUITests */,
@@ -237,8 +229,6 @@
 		FE28BF4E216F3F6700CA885B /* Me */ = {
 			isa = PBXGroup;
 			children = (
-				FEE0BFE72191879600CE88CD /* MeViewController.h */,
-				FEE0BFE82191879600CE88CD /* MeViewController.m */,
 			);
 			path = Me;
 			sourceTree = "<group>";
@@ -491,12 +481,10 @@
 				FE28BF83216F594400CA885B /* LatinMarkView.m in Sources */,
 				FEA53398218C1C8000B09A2B /* SqliteManager.m in Sources */,
 				FE28BF4D216F2BED00CA885B /* MainTabBarController.m in Sources */,
-				FEE0BFEC2192928E00CE88CD /* JZLocationConverter.m in Sources */,
 				FE28BF19216F27A500CA885B /* AppDelegate.m in Sources */,
 				FEA5339C218C26D500B09A2B /* WXContacts.m in Sources */,
 				FEE0BFCA21904D0E00CE88CD /* AddFileViewController.m in Sources */,
 				FEE0BFC6218FF08800CE88CD /* RecoverViewController.m in Sources */,
-				FEE0BFE92191879600CE88CD /* MeViewController.m in Sources */,
 				FEE0BFE5219183BE00CE88CD /* BackupFileListCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
