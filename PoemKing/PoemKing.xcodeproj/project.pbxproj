@@ -19,11 +19,15 @@
 		FE28BF3C216F27A900CA885B /* PoemKingUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = FE28BF3B216F27A900CA885B /* PoemKingUITests.m */; };
 		FE28BF4D216F2BED00CA885B /* MainTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = FE28BF4C216F2BED00CA885B /* MainTabBarController.m */; };
 		FE28BF83216F594400CA885B /* LatinMarkView.m in Sources */ = {isa = PBXBuildFile; fileRef = FE28BF82216F594400CA885B /* LatinMarkView.m */; };
+		FE80E69A2199245C0015FFCC /* MeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FE80E6992199245C0015FFCC /* MeViewController.m */; };
 		FEA53395218C1C4B00B09A2B /* WCDB_Contact.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = FEA53394218C1C4B00B09A2B /* WCDB_Contact.sqlite */; };
 		FEA53398218C1C8000B09A2B /* SqliteManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FEA53397218C1C8000B09A2B /* SqliteManager.m */; };
 		FEA5339C218C26D500B09A2B /* WXContacts.m in Sources */ = {isa = PBXBuildFile; fileRef = FEA5339B218C26D500B09A2B /* WXContacts.m */; };
 		FEA5339F218C286F00B09A2B /* BinaryDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FEA5339E218C286F00B09A2B /* BinaryDataManager.m */; };
 		FEE0BFC6218FF08800CE88CD /* RecoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FEE0BFC5218FF08800CE88CD /* RecoverViewController.m */; };
+		FEE0BFCA21904D0E00CE88CD /* AddFileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FEE0BFC921904D0E00CE88CD /* AddFileViewController.m */; };
+		FEE0BFE5219183BE00CE88CD /* BackupFileListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FEE0BFE3219183BE00CE88CD /* BackupFileListCell.m */; };
+		FEE0BFE6219183BE00CE88CD /* BackupFileListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FEE0BFE4219183BE00CE88CD /* BackupFileListCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +75,8 @@
 		FE28BF4C216F2BED00CA885B /* MainTabBarController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainTabBarController.m; sourceTree = "<group>"; };
 		FE28BF81216F594400CA885B /* LatinMarkView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LatinMarkView.h; sourceTree = "<group>"; };
 		FE28BF82216F594400CA885B /* LatinMarkView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LatinMarkView.m; sourceTree = "<group>"; };
+		FE80E6982199245C0015FFCC /* MeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MeViewController.h; sourceTree = "<group>"; };
+		FE80E6992199245C0015FFCC /* MeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MeViewController.m; sourceTree = "<group>"; };
 		FEA53394218C1C4B00B09A2B /* WCDB_Contact.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = WCDB_Contact.sqlite; sourceTree = "<group>"; };
 		FEA53396218C1C8000B09A2B /* SqliteManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SqliteManager.h; sourceTree = "<group>"; };
 		FEA53397218C1C8000B09A2B /* SqliteManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SqliteManager.m; sourceTree = "<group>"; };
@@ -81,6 +87,11 @@
 		FEE0BFC4218FF08800CE88CD /* RecoverViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RecoverViewController.h; sourceTree = "<group>"; };
 		FEE0BFC5218FF08800CE88CD /* RecoverViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RecoverViewController.m; sourceTree = "<group>"; };
 		FEE0BFC7219022CA00CE88CD /* PoemKing.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PoemKing.pch; sourceTree = "<group>"; };
+		FEE0BFC821904D0E00CE88CD /* AddFileViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AddFileViewController.h; sourceTree = "<group>"; };
+		FEE0BFC921904D0E00CE88CD /* AddFileViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AddFileViewController.m; sourceTree = "<group>"; };
+		FEE0BFE2219183BE00CE88CD /* BackupFileListCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BackupFileListCell.h; sourceTree = "<group>"; };
+		FEE0BFE3219183BE00CE88CD /* BackupFileListCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BackupFileListCell.m; sourceTree = "<group>"; };
+		FEE0BFE4219183BE00CE88CD /* BackupFileListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BackupFileListCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -195,11 +206,11 @@
 		FE28BF49216F2B4300CA885B /* View */ = {
 			isa = PBXGroup;
 			children = (
+				FE80E6972199244F0015FFCC /* Me */,
 				FE28BF80216F58F500CA885B /* CustomView */,
 				FE28BF51216F3F9C00CA885B /* Find */,
 				FE28BF50216F3F8D00CA885B /* Activity */,
 				FE28BF4F216F3F7500CA885B /* Home */,
-				FE28BF4E216F3F6700CA885B /* Me */,
 				FE28BF1D216F27A500CA885B /* Main.storyboard */,
 				FE28BF4B216F2BED00CA885B /* MainTabBarController.h */,
 				FE28BF4C216F2BED00CA885B /* MainTabBarController.m */,
@@ -218,18 +229,16 @@
 			path = Tools;
 			sourceTree = "<group>";
 		};
-		FE28BF4E216F3F6700CA885B /* Me */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Me;
-			sourceTree = "<group>";
-		};
 		FE28BF4F216F3F7500CA885B /* Home */ = {
 			isa = PBXGroup;
 			children = (
 				FEE0BFC4218FF08800CE88CD /* RecoverViewController.h */,
 				FEE0BFC5218FF08800CE88CD /* RecoverViewController.m */,
+				FEE0BFC821904D0E00CE88CD /* AddFileViewController.h */,
+				FEE0BFC921904D0E00CE88CD /* AddFileViewController.m */,
+				FEE0BFE2219183BE00CE88CD /* BackupFileListCell.h */,
+				FEE0BFE3219183BE00CE88CD /* BackupFileListCell.m */,
+				FEE0BFE4219183BE00CE88CD /* BackupFileListCell.xib */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -255,6 +264,15 @@
 				FE28BF82216F594400CA885B /* LatinMarkView.m */,
 			);
 			path = CustomView;
+			sourceTree = "<group>";
+		};
+		FE80E6972199244F0015FFCC /* Me */ = {
+			isa = PBXGroup;
+			children = (
+				FE80E6982199245C0015FFCC /* MeViewController.h */,
+				FE80E6992199245C0015FFCC /* MeViewController.m */,
+			);
+			path = Me;
 			sourceTree = "<group>";
 		};
 		FEA53399218C26C000B09A2B /* Model */ = {
@@ -336,6 +354,11 @@
 				TargetAttributes = {
 					FE28BF13216F27A500CA885B = {
 						CreatedOnToolsVersion = 10.0;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 					FE28BF2B216F27A900CA885B = {
 						CreatedOnToolsVersion = 10.0;
@@ -374,6 +397,7 @@
 			files = (
 				FE28BF24216F27A900CA885B /* LaunchScreen.storyboard in Resources */,
 				FE28BF21216F27A900CA885B /* Assets.xcassets in Resources */,
+				FEE0BFE6219183BE00CE88CD /* BackupFileListCell.xib in Resources */,
 				FEA53395218C1C4B00B09A2B /* WCDB_Contact.sqlite in Resources */,
 				FE28BF1F216F27A500CA885B /* Main.storyboard in Resources */,
 			);
@@ -464,7 +488,10 @@
 				FE28BF4D216F2BED00CA885B /* MainTabBarController.m in Sources */,
 				FE28BF19216F27A500CA885B /* AppDelegate.m in Sources */,
 				FEA5339C218C26D500B09A2B /* WXContacts.m in Sources */,
+				FEE0BFCA21904D0E00CE88CD /* AddFileViewController.m in Sources */,
 				FEE0BFC6218FF08800CE88CD /* RecoverViewController.m in Sources */,
+				FE80E69A2199245C0015FFCC /* MeViewController.m in Sources */,
+				FEE0BFE5219183BE00CE88CD /* BackupFileListCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -7,7 +7,7 @@ target 'PoemKing' do
   pod 'FMDB'  
   pod 'SDWebImage', '~> 4.0'
   pod 'Masonry'
-  pod 'DZNEmptyDataSet'
+  pod 'DZNEmptyDataSet'  
 
   # Pods for PoemKing
 
