@@ -196,32 +196,10 @@
                     <view key="view" contentMode="scaleToFill" id="b7u-7s-jCg">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="jIh-GG-ND9">
-                                <rect key="frame" x="0.0" y="64" width="375" height="667"/>
-                            </mapView>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="jIh-GG-ND9" firstAttribute="height" secondItem="b7u-7s-jCg" secondAttribute="height" id="37V-eg-weJ"/>
-                            <constraint firstItem="jIh-GG-ND9" firstAttribute="width" secondItem="b7u-7s-jCg" secondAttribute="width" id="ERR-R8-bVL"/>
-                            <constraint firstItem="jIh-GG-ND9" firstAttribute="top" secondItem="BYr-EL-inf" secondAttribute="top" id="YRL-tz-poh"/>
-                            <constraint firstItem="jIh-GG-ND9" firstAttribute="leading" secondItem="BYr-EL-inf" secondAttribute="leading" id="rIP-Ci-P7a"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="BYr-EL-inf"/>
                     </view>
-                    <navigationItem key="navigationItem" id="fUA-Jj-UaJ">
-                        <barButtonItem key="rightBarButtonItem" style="plain" id="1ob-oG-Hzo">
-                            <switch key="customView" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" id="0E2-aB-S6D">
-                                <rect key="frame" x="308" y="6.5" width="51" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </switch>
-                        </barButtonItem>
-                    </navigationItem>
-                    <connections>
-                        <outlet property="mapView" destination="jIh-GG-ND9" id="eDH-rQ-z2z"/>
-                        <outlet property="openMonitor" destination="0E2-aB-S6D" id="yAC-Uh-3Vy"/>
-                    </connections>
+                    <navigationItem key="navigationItem" id="fUA-Jj-UaJ"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="c4V-bS-0Gy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

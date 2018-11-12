@@ -19,6 +19,7 @@
 		FE28BF3C216F27A900CA885B /* PoemKingUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = FE28BF3B216F27A900CA885B /* PoemKingUITests.m */; };
 		FE28BF4D216F2BED00CA885B /* MainTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = FE28BF4C216F2BED00CA885B /* MainTabBarController.m */; };
 		FE28BF83216F594400CA885B /* LatinMarkView.m in Sources */ = {isa = PBXBuildFile; fileRef = FE28BF82216F594400CA885B /* LatinMarkView.m */; };
+		FE80E69A2199245C0015FFCC /* MeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FE80E6992199245C0015FFCC /* MeViewController.m */; };
 		FEA53395218C1C4B00B09A2B /* WCDB_Contact.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = FEA53394218C1C4B00B09A2B /* WCDB_Contact.sqlite */; };
 		FEA53398218C1C8000B09A2B /* SqliteManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FEA53397218C1C8000B09A2B /* SqliteManager.m */; };
 		FEA5339C218C26D500B09A2B /* WXContacts.m in Sources */ = {isa = PBXBuildFile; fileRef = FEA5339B218C26D500B09A2B /* WXContacts.m */; };
@@ -74,6 +75,8 @@
 		FE28BF4C216F2BED00CA885B /* MainTabBarController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainTabBarController.m; sourceTree = "<group>"; };
 		FE28BF81216F594400CA885B /* LatinMarkView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LatinMarkView.h; sourceTree = "<group>"; };
 		FE28BF82216F594400CA885B /* LatinMarkView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LatinMarkView.m; sourceTree = "<group>"; };
+		FE80E6982199245C0015FFCC /* MeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MeViewController.h; sourceTree = "<group>"; };
+		FE80E6992199245C0015FFCC /* MeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MeViewController.m; sourceTree = "<group>"; };
 		FEA53394218C1C4B00B09A2B /* WCDB_Contact.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = WCDB_Contact.sqlite; sourceTree = "<group>"; };
 		FEA53396218C1C8000B09A2B /* SqliteManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SqliteManager.h; sourceTree = "<group>"; };
 		FEA53397218C1C8000B09A2B /* SqliteManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SqliteManager.m; sourceTree = "<group>"; };
@@ -203,11 +206,11 @@
 		FE28BF49216F2B4300CA885B /* View */ = {
 			isa = PBXGroup;
 			children = (
+				FE80E6972199244F0015FFCC /* Me */,
 				FE28BF80216F58F500CA885B /* CustomView */,
 				FE28BF51216F3F9C00CA885B /* Find */,
 				FE28BF50216F3F8D00CA885B /* Activity */,
 				FE28BF4F216F3F7500CA885B /* Home */,
-				FE28BF4E216F3F6700CA885B /* Me */,
 				FE28BF1D216F27A500CA885B /* Main.storyboard */,
 				FE28BF4B216F2BED00CA885B /* MainTabBarController.h */,
 				FE28BF4C216F2BED00CA885B /* MainTabBarController.m */,
@@ -224,13 +227,6 @@
 				FEA5339E218C286F00B09A2B /* BinaryDataManager.m */,
 			);
 			path = Tools;
-			sourceTree = "<group>";
-		};
-		FE28BF4E216F3F6700CA885B /* Me */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Me;
 			sourceTree = "<group>";
 		};
 		FE28BF4F216F3F7500CA885B /* Home */ = {
@@ -268,6 +264,15 @@
 				FE28BF82216F594400CA885B /* LatinMarkView.m */,
 			);
 			path = CustomView;
+			sourceTree = "<group>";
+		};
+		FE80E6972199244F0015FFCC /* Me */ = {
+			isa = PBXGroup;
+			children = (
+				FE80E6982199245C0015FFCC /* MeViewController.h */,
+				FE80E6992199245C0015FFCC /* MeViewController.m */,
+			);
+			path = Me;
 			sourceTree = "<group>";
 		};
 		FEA53399218C26C000B09A2B /* Model */ = {
@@ -485,6 +490,7 @@
 				FEA5339C218C26D500B09A2B /* WXContacts.m in Sources */,
 				FEE0BFCA21904D0E00CE88CD /* AddFileViewController.m in Sources */,
 				FEE0BFC6218FF08800CE88CD /* RecoverViewController.m in Sources */,
+				FE80E69A2199245C0015FFCC /* MeViewController.m in Sources */,
 				FEE0BFE5219183BE00CE88CD /* BackupFileListCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
