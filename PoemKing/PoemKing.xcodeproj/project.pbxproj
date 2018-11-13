@@ -51,6 +51,7 @@
 		FE80E701219965090015FFCC /* GCDAsyncSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = FE80E6E4219965090015FFCC /* GCDAsyncSocket.m */; };
 		FE80E702219965090015FFCC /* About.txt in Resources */ = {isa = PBXBuildFile; fileRef = FE80E6E5219965090015FFCC /* About.txt */; };
 		FE80E712219977ED0015FFCC /* web in Resources */ = {isa = PBXBuildFile; fileRef = FE80E711219977ED0015FFCC /* web */; };
+		FE80E748219ABEB30015FFCC /* emptyData.png in Resources */ = {isa = PBXBuildFile; fileRef = FE80E747219ABEB20015FFCC /* emptyData.png */; };
 		FEA53395218C1C4B00B09A2B /* WCDB_Contact.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = FEA53394218C1C4B00B09A2B /* WCDB_Contact.sqlite */; };
 		FEA53398218C1C8000B09A2B /* SqliteManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FEA53397218C1C8000B09A2B /* SqliteManager.m */; };
 		FEA5339C218C26D500B09A2B /* WXContacts.m in Sources */ = {isa = PBXBuildFile; fileRef = FEA5339B218C26D500B09A2B /* WXContacts.m */; };
@@ -168,6 +169,7 @@
 		FE80E6E5219965090015FFCC /* About.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = About.txt; sourceTree = "<group>"; };
 		FE80E6E6219965090015FFCC /* GCDAsyncSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDAsyncSocket.h; sourceTree = "<group>"; };
 		FE80E711219977ED0015FFCC /* web */ = {isa = PBXFileReference; lastKnownFileType = folder; path = web; sourceTree = "<group>"; };
+		FE80E747219ABEB20015FFCC /* emptyData.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = emptyData.png; sourceTree = "<group>"; };
 		FEA53394218C1C4B00B09A2B /* WCDB_Contact.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = WCDB_Contact.sqlite; sourceTree = "<group>"; };
 		FEA53396218C1C8000B09A2B /* SqliteManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SqliteManager.h; sourceTree = "<group>"; };
 		FEA53397218C1C8000B09A2B /* SqliteManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SqliteManager.m; sourceTree = "<group>"; };
@@ -263,6 +265,7 @@
 		FE28BF16216F27A500CA885B /* PoemKing */ = {
 			isa = PBXGroup;
 			children = (
+				FE80E749219ABEB60015FFCC /* resources */,
 				FE80E711219977ED0015FFCC /* web */,
 				FE80E6A721995AC90015FFCC /* webServer */,
 				FEA53399218C26C000B09A2B /* Model */,
@@ -498,6 +501,14 @@
 			path = CocoaAsyncSocket;
 			sourceTree = "<group>";
 		};
+		FE80E749219ABEB60015FFCC /* resources */ = {
+			isa = PBXGroup;
+			children = (
+				FE80E747219ABEB20015FFCC /* emptyData.png */,
+			);
+			path = resources;
+			sourceTree = "<group>";
+		};
 		FEA53399218C26C000B09A2B /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -621,6 +632,7 @@
 				FE80E712219977ED0015FFCC /* web in Resources */,
 				FE28BF24216F27A900CA885B /* LaunchScreen.storyboard in Resources */,
 				FE28BF21216F27A900CA885B /* Assets.xcassets in Resources */,
+				FE80E748219ABEB30015FFCC /* emptyData.png in Resources */,
 				FE80E702219965090015FFCC /* About.txt in Resources */,
 				FEE0BFE6219183BE00CE88CD /* BackupFileListCell.xib in Resources */,
 				FEA53395218C1C4B00B09A2B /* WCDB_Contact.sqlite in Resources */,

@@ -22,25 +22,6 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-
-        
-        _httpServer = [[HTTPServer alloc] init];
-        [_httpServer setPort:50517];
-        [_httpServer setType:@"_http._tcp."];
-        
-        NSString *webResourcePath = [[NSBundle mainBundle] pathForResource:@"web" ofType:nil];
-        [_httpServer setDocumentRoot:webResourcePath];
-        [_httpServer setConnectionClass:[MyHTTPConnection class]];
-        NSError *err;
-        if([_httpServer start:&err]){
-            NSLog(@"start server success in port %d %@",[_httpServer listeningPort],[_httpServer publishedName]);
-        }else{
-            NSLog(@"%@",err);
-        }
-        NSString *ipStr = [LGUtils getIpAddresses1];
-        NSLog(@"ip address : %@",ipStr);
-        
-
     
     return YES;
 }

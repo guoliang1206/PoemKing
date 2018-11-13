@@ -33,6 +33,7 @@
     self.view.backgroundColor = [UIColor whiteColor];
     
     [self initialPage];
+    [self initialHttpFileServer];
     
 }
 

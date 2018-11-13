@@ -121,6 +121,8 @@ static const int httpLogLevel = HTTP_LOG_LEVEL_VERBOSE; // | HTTP_LOG_FLAG_TRACE
     parser.delegate = self;
 
 	uploadedFiles = [[NSMutableArray alloc] init];
+    
+    NSLog(@"contentLength >>>>> %llu",contentLength);
 }
 
 - (void)processBodyData:(NSData *)postDataChunk
@@ -130,6 +132,7 @@ static const int httpLogLevel = HTTP_LOG_LEVEL_VERBOSE; // | HTTP_LOG_FLAG_TRACE
     // parsed data.
     [parser appendData:postDataChunk];
 }
+
 
 
 //-----------------------------------------------------------------
@@ -170,6 +173,8 @@ static const int httpLogLevel = HTTP_LOG_LEVEL_VERBOSE; // | HTTP_LOG_FLAG_TRACE
 		}
 		storeFile = [NSFileHandle fileHandleForWritingAtPath:filePath];
 		[uploadedFiles addObject: [NSString stringWithFormat:@"/upload/%@", filename]];
+        
+        
     }
 }
 
