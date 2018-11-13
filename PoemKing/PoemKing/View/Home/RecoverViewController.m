@@ -40,7 +40,7 @@
     self.tableview.delegate = self;
     
     [self.tableview registerNib:[UINib nibWithNibName:@"BackupFileListCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:@"BackupFileListCell"];
-    
+    [self.dataSource addObject:@"TestUser"];
     
     [self.tableview reloadData];
     
@@ -63,17 +63,30 @@
         make.edges.equalTo(self.tableview).with.insets(padding);
     }];
   
+    UIImage *emptyImage = [UIImage imageNamed:@"emptyData.png"];
+    UIImageView *emptyDataImageView = [[UIImageView alloc] initWithImage:emptyImage];
+    [bgview addSubview:emptyDataImageView];
     
-    NSString *text = @"请添加备份文件";
+    [emptyDataImageView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.centerX.mas_equalTo(bgview.mas_centerX);
+        make.top.mas_equalTo(bgview.mas_top).mas_offset(64);
+        make.width.mas_equalTo(bgview.mas_width).mas_offset(-30);
+        make.height.equalTo(emptyDataImageView.mas_width);
+    }];
+    
+    NSString *text = @"点击添加备份文件";
     NSDictionary * attributes = @{NSFontAttributeName:[UIFont boldSystemFontOfSize:18.0f],NSForegroundColorAttributeName:[UIColor darkGrayColor]};
     NSAttributedString *title = [[NSAttributedString alloc] initWithString:text attributes:attributes];
     
-    UILabel *titleLable = [[UILabel alloc] init];
-    [titleLable setAttributedText:title];
-    [bgview addSubview:titleLable];
+    UILabel *tipLable = [[UILabel alloc] init];
+    [tipLable setAttributedText:title];
+    [bgview addSubview:tipLable];
     
     
-    [titleLable mas_makeConstraints:^(MASConstraintMaker *make) {
+    [tipLable mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.mas_equalTo(emptyDataImageView.mas_bottom).mas_offset(20);
+        make.centerX.mas_equalTo(bgview.mas_centerX);
+        make.height.mas_equalTo(30);
         
     }];
     

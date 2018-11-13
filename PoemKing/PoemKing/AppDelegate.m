@@ -7,8 +7,13 @@
 //
 
 #import "AppDelegate.h"
+#import "HTTPServer.h"
+#import "MyHTTPConnection.h"
+#import "LGUtils.h"
 
-@interface AppDelegate ()
+@interface AppDelegate (){
+    HTTPServer *_httpServer;
+}
 
 @end
 
@@ -17,6 +22,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
     return YES;
 }
 
