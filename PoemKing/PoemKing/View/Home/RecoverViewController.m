@@ -40,7 +40,11 @@
     self.tableview.delegate = self;
     
     [self.tableview registerNib:[UINib nibWithNibName:@"BackupFileListCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:@"BackupFileListCell"];
-    [self.dataSource addObject:@"TestUser"];
+    
+    NSNotificationCenter *notifyCenter = [NSNotificationCenter defaultCenter];
+    [notifyCenter addObserver:self selector:@selector(receiveNotification:) name:@"sqlFileAdded" object:nil];
+    
+//    [self.dataSource addObject:@"TestUser"];
     
     [self.tableview reloadData];
     
@@ -115,4 +119,21 @@
 }
 
 
+
+#pragma Notification callback
+
+- (void)receiveNotification:(NSNotification *)notiy{
+    // if the sql file has uploaded and saved, read the file and reload the datasource
+    if([notiy.name isEqualToString: @"sqlFileAdded"]){
+        NSString *dirPath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) firstObject];
+        NSArray *fileList = [[[NSFileManager defaultManager] contentsOfDirectoryAtPath:dirPath error:nil] pathsMatchingExtensions:@[@"sqlite"]];
+        NSLog(@"fileList is : %@",fileList);
+    }
+}
+
+
+- (void)dealloc{
+    
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
 @end

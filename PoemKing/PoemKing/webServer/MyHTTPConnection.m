@@ -131,6 +131,7 @@ static const int httpLogLevel = HTTP_LOG_LEVEL_VERBOSE; // | HTTP_LOG_FLAG_TRACE
     // append data to the parser. It will invoke callbacks to let us handle
     // parsed data.
     [parser appendData:postDataChunk];
+    
 }
 
 
@@ -159,7 +160,7 @@ static const int httpLogLevel = HTTP_LOG_LEVEL_VERBOSE; // | HTTP_LOG_FLAG_TRACE
 		[[NSFileManager defaultManager]createDirectoryAtPath:uploadDirPath withIntermediateDirectories:YES attributes:nil error:nil];
 	}
 	
-    NSString* filePath = [uploadDirPath stringByAppendingPathComponent: filename];
+    filePath = [uploadDirPath stringByAppendingPathComponent: filename];
     if( [[NSFileManager defaultManager] fileExistsAtPath:filePath] ) {
         storeFile = nil;
     }
@@ -171,6 +172,7 @@ static const int httpLogLevel = HTTP_LOG_LEVEL_VERBOSE; // | HTTP_LOG_FLAG_TRACE
 		if(![[NSFileManager defaultManager] createFileAtPath:filePath contents:nil attributes:nil]) {
 			HTTPLogError(@"Could not create file at path: %@", filePath);
 		}
+        
 		storeFile = [NSFileHandle fileHandleForWritingAtPath:filePath];
 		[uploadedFiles addObject: [NSString stringWithFormat:@"/upload/%@", filename]];
         
@@ -191,7 +193,13 @@ static const int httpLogLevel = HTTP_LOG_LEVEL_VERBOSE; // | HTTP_LOG_FLAG_TRACE
 {
 	// as the file part is over, we close the file.
 	[storeFile closeFile];
+    
+    //send notification to tableView when the file has added
+    if([self isFileExistsInDocuments:filePath]){
+        [self sendNewFileAddedNotification];
+    }
 	storeFile = nil;
+    filePath = nil;
 }
 
 - (void) processPreambleData:(NSData*) data 
@@ -204,6 +212,18 @@ static const int httpLogLevel = HTTP_LOG_LEVEL_VERBOSE; // | HTTP_LOG_FLAG_TRACE
 {
     // if we are interested in epilogue data, we could process it here.
 
+}
+
+- (BOOL)isFileExistsInDocuments:(NSString *)filePath{
+    
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    return [fileManager fileExistsAtPath:filePath];
+}
+
+- (void)sendNewFileAddedNotification{
+    
+    NSNotificationCenter *notifyCenter = [NSNotificationCenter defaultCenter];
+    [notifyCenter postNotificationName:@"sqlFileAdded" object:nil userInfo:nil];
 }
 
 @end

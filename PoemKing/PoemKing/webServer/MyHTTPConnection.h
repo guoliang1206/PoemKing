@@ -6,8 +6,9 @@
 @interface MyHTTPConnection : HTTPConnection  {
     MultipartFormDataParser*        parser;
 	NSFileHandle*					storeFile;
-	
 	NSMutableArray*					uploadedFiles;
+    NSString *                      filePath;
+    
 }
 
 @end
