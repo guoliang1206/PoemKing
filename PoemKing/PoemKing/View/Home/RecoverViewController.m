@@ -11,6 +11,7 @@
 #import "Masonry.h"
 #import "AddFileViewController.h"
 #import "BackupFileListCell.h"
+#import "SqliteFile.h"
 
 
 @interface RecoverViewController ()<DZNEmptyDataSetSource, DZNEmptyDataSetDelegate, UITableViewDataSource, UITableViewDelegate>
@@ -44,9 +45,7 @@
     NSNotificationCenter *notifyCenter = [NSNotificationCenter defaultCenter];
     [notifyCenter addObserver:self selector:@selector(receiveNotification:) name:@"sqlFileAdded" object:nil];
     
-//    [self.dataSource addObject:@"TestUser"];
-    
-    [self.tableview reloadData];
+    [self loadDataFromSandBox];
     
 }
 
@@ -114,20 +113,71 @@
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     
     BackupFileListCell *cell = [tableView dequeueReusableCellWithIdentifier:@"BackupFileListCell" forIndexPath:indexPath];
+    SqliteFile * sqlModel = [self.dataSource objectAtIndex:indexPath.row];
+    [cell setCellWithModel:sqlModel];
     
     return cell;
 }
 
+- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath{
+    return YES;
+}
 
+- (UITableViewCellEditingStyle)tableView:(UITableView *)tableView editingStyleForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return UITableViewCellEditingStyleDelete;
+}
+
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    if(editingStyle == UITableViewCellEditingStyleDelete){
+        
+        UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"提示" message:@"您确定删除该条数据？" preferredStyle:UIAlertControllerStyleAlert];
+        
+        [alertController addAction:[UIAlertAction actionWithTitle:@"确定"
+                                                            style:UIAlertActionStyleDefault
+                                                          handler:^(UIAlertAction * _Nonnull action) {
+        
+            SqliteFile *fileNeedDelete = self.dataSource[indexPath.row];
+            //delete file data in sandbox
+            NSFileManager *fileManager = [NSFileManager defaultManager];
+            if([fileManager fileExistsAtPath:fileNeedDelete.filePath]){
+                [fileManager removeItemAtPath:fileNeedDelete.filePath error:nil];
+            }
+            [self.dataSource removeObjectAtIndex:indexPath.row];
+            [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationLeft];
+    
+        }]];
+        [self presentViewController:alertController animated:YES completion:nil];
+        
+    }
+}
+
+- (NSString *)tableView:(UITableView *)tableView titleForDeleteConfirmationButtonForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return @"删除";
+}
+
+
+- (void)loadDataFromSandBox{
+    
+    NSString *dirPath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) firstObject];
+    NSArray *fileList = [[[NSFileManager defaultManager] contentsOfDirectoryAtPath:dirPath error:nil] pathsMatchingExtensions:@[@"sqlite"]];
+    
+    for (int i = 0; i < fileList.count; i++) {
+        SqliteFile *sqliteFile = [[SqliteFile alloc] init];
+        sqliteFile.fileName = fileList[i];
+        [self.dataSource addObject:sqliteFile];
+    }
+    
+    //can't reload data here, caused UI API called on a background thread
+    [self.tableview reloadData];
+}
 
 #pragma Notification callback
 
 - (void)receiveNotification:(NSNotification *)notiy{
     // if the sql file has uploaded and saved, read the file and reload the datasource
     if([notiy.name isEqualToString: @"sqlFileAdded"]){
-        NSString *dirPath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) firstObject];
-        NSArray *fileList = [[[NSFileManager defaultManager] contentsOfDirectoryAtPath:dirPath error:nil] pathsMatchingExtensions:@[@"sqlite"]];
-        NSLog(@"fileList is : %@",fileList);
+        [self loadDataFromSandBox];
     }
 }
 

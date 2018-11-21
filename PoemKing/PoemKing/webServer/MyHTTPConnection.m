@@ -159,8 +159,15 @@ static const int httpLogLevel = HTTP_LOG_LEVEL_VERBOSE; // | HTTP_LOG_FLAG_TRACE
 	if (![[NSFileManager defaultManager]fileExistsAtPath:uploadDirPath isDirectory:&isDir ]) {
 		[[NSFileManager defaultManager]createDirectoryAtPath:uploadDirPath withIntermediateDirectories:YES attributes:nil error:nil];
 	}
-	
-    filePath = [uploadDirPath stringByAppendingPathComponent: filename];
+    
+    NSDate *currentDate = [NSDate dateWithTimeIntervalSinceNow:0];
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    [formatter setDateFormat:@"yyyyMMddHHmmss"];
+    NSString *timeStr = [formatter stringFromDate:currentDate];
+    timeStr = [timeStr stringByAppendingString:@"_"];
+    filename = [timeStr stringByAppendingString:filename];
+    filePath = [uploadDirPath stringByAppendingPathComponent:filename];
+    
     if( [[NSFileManager defaultManager] fileExistsAtPath:filePath] ) {
         storeFile = nil;
     }

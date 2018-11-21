@@ -37,6 +37,7 @@
     FMResultSet *resultSet = [self.db executeQuery:sql];
     
     while ([resultSet next]) {
+        
         WXContacts *contact = [[WXContacts alloc] init];
         contact.userName = [resultSet stringForColumn:@"userName"];
         contact.dbContactHeadImage = [resultSet dataForColumn:@"dbContactHeadImage"];
@@ -48,6 +49,7 @@
         contact.dbContactBrand = [resultSet dataForColumn:@"dbContactBrand"];
         contact.dbContactChatRoom = [resultSet dataForColumn:@"dbContactChatRoom"];
         contact.type = [resultSet intForColumn:@"type"];
+        
         [result addObject:contact];
     
     }

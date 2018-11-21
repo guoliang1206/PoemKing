@@ -7,11 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SqliteFile.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface BackupFileListCell : UITableViewCell
 
+- (void)setCellWithModel:(SqliteFile *)model;
 
 @end
 

@@ -19,6 +19,9 @@
     // Initialization code
 }
 
+- (void)setCellWithModel:(SqliteFile *)model{
+    [self.titleLabel setText:model.fileName];
+}
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];
