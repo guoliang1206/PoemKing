@@ -7,9 +7,7 @@
 //
 
 #import "MainTabBarController.h"
-#import "SqliteManager.h"
-#import "BinaryDataManager.h"
-#import "WXContacts.h"
+
 
 
 @interface MainTabBarController ()
@@ -21,24 +19,18 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    SqliteManager *manager = [SqliteManager sharedSqliteManager];
-    BinaryDataManager *binDataManager = [BinaryDataManager sharedBinDataManager];
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    NSString *docuPath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) firstObject];
+    NSString *oldPath = [[NSBundle mainBundle] pathForResource:@"WCDB_Contact" ofType:@".sqlite"];
+    NSString *newPath = [docuPath stringByAppendingPathComponent:@"WCDB_Contact.sqlite"];
     
-    NSString *dbPath = [[NSBundle mainBundle] pathForResource:@"WCDB_Contact" ofType:@".sqlite"];
-
-    if([manager openDBWithDBPath:dbPath]){
-        NSMutableArray *contacts = [manager queryWithSql:@"select * from Friend where type = '3' or type = '7';"];
-        for (WXContacts *contact in contacts) {
-            NSLog(@"UserName : %@ , remark : %@ , headImage: %@",contact.userName,[[binDataManager getRemarkDataBy:contact.dbContactRemark].firstObject stringByRemovingPercentEncoding],[binDataManager getPhotoBy:contact.dbContactHeadImage]);
-            NSLog(@"dbContactLocal :%@",[[NSString alloc]initWithData:contact.dbContactLocal encoding:NSUTF8StringEncoding]);
-            NSLog(@"dbContactOther :%@",[[NSString alloc]initWithData:contact.dbContactOther encoding:NSUTF8StringEncoding]);
-            NSLog(@"dbContactProfile :%@",[[NSString alloc]initWithData:contact.dbContactProfile encoding:NSUTF8StringEncoding]);
-            NSLog(@"dbContactSocial :%@",[[NSString alloc]initWithData:contact.dbContactSocial encoding:NSUTF8StringEncoding]);
-            
-        }
+    if(![fileManager fileExistsAtPath:newPath]){
+        NSLog(@"File doesn't exists");
+        BOOL isSuccess = [fileManager copyItemAtPath:oldPath toPath:newPath error:nil];
+        NSLog(@"Copy file %@",isSuccess?@"Success":@"Faliure");
+    }else{
+        NSLog(@"File has already exists %@",newPath);
     }
-    
-
 }
 
 /*

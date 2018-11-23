@@ -16,11 +16,15 @@
 
 - (void)awakeFromNib {
     [super awakeFromNib];
+    self.selectionStyle = UITableViewCellSelectionStyleNone;
     // Initialization code
 }
 
 - (void)setCellWithModel:(SqliteFile *)model{
     [self.titleLabel setText:model.fileName];
+}
+
+- (IBAction)recover:(id)sender {
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

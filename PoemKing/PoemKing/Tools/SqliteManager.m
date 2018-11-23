@@ -9,6 +9,7 @@
 #import "SqliteManager.h"
 #import "WXContacts.h"
 
+
 @implementation SqliteManager
 
 + (instancetype)sharedSqliteManager{

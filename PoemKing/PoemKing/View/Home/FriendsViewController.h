@@ -1,8 +1,8 @@
 //
-//  BackupFileListCell.h
+//  FriendsViewController.h
 //  PoemKing
 //
-//  Created by Leon Guo on 2018/11/6.
+//  Created by Leon Guo on 2018/11/22.
 //  Copyright © 2018 Leon Guo. All rights reserved.
 //
 
@@ -11,9 +11,9 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface BackupFileListCell : UITableViewCell
+@interface FriendsViewController : UIViewController
 
-- (void)setCellWithModel:(SqliteFile *)model;
+@property (strong, nonatomic) SqliteFile *sqlFile;
 
 @end
 

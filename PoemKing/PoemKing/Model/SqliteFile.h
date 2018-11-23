@@ -15,6 +15,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (strong, nonatomic) NSString *fileName;
 @property (strong, nonatomic) NSString *filePath;
 @property (assign, nonatomic) NSInteger *fileSize;
+@property (assign, nonatomic) BOOL isRecovered;
+
 @end
 
 NS_ASSUME_NONNULL_END

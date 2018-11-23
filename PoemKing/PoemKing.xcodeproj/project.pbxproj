@@ -20,6 +20,9 @@
 		FE28BF4D216F2BED00CA885B /* MainTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = FE28BF4C216F2BED00CA885B /* MainTabBarController.m */; };
 		FE28BF83216F594400CA885B /* LatinMarkView.m in Sources */ = {isa = PBXBuildFile; fileRef = FE28BF82216F594400CA885B /* LatinMarkView.m */; };
 		FE37E8FF21A55BE7001BA2FC /* WXFriends.m in Sources */ = {isa = PBXBuildFile; fileRef = FE37E8FE21A55BE7001BA2FC /* WXFriends.m */; };
+		FE37E91D21A69B1C001BA2FC /* FriendsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FE37E91C21A69B1C001BA2FC /* FriendsViewController.m */; };
+		FE37E92221A6A40A001BA2FC /* FriendsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FE37E92021A6A40A001BA2FC /* FriendsCell.m */; };
+		FE37E92321A6A40A001BA2FC /* FriendsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE37E92121A6A40A001BA2FC /* FriendsCell.xib */; };
 		FE80E69A2199245C0015FFCC /* MeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FE80E6992199245C0015FFCC /* MeViewController.m */; };
 		FE80E69D219951450015FFCC /* LGUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = FE80E69C219951450015FFCC /* LGUtils.m */; };
 		FE80E6A521995AC50015FFCC /* MyHTTPConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = FE80E6A221995AC40015FFCC /* MyHTTPConnection.m */; };
@@ -111,6 +114,11 @@
 		FE28BF82216F594400CA885B /* LatinMarkView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LatinMarkView.m; sourceTree = "<group>"; };
 		FE37E8FD21A55BE7001BA2FC /* WXFriends.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WXFriends.h; sourceTree = "<group>"; };
 		FE37E8FE21A55BE7001BA2FC /* WXFriends.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WXFriends.m; sourceTree = "<group>"; };
+		FE37E91B21A69B1C001BA2FC /* FriendsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FriendsViewController.h; sourceTree = "<group>"; };
+		FE37E91C21A69B1C001BA2FC /* FriendsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FriendsViewController.m; sourceTree = "<group>"; };
+		FE37E91F21A6A40A001BA2FC /* FriendsCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FriendsCell.h; sourceTree = "<group>"; };
+		FE37E92021A6A40A001BA2FC /* FriendsCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FriendsCell.m; sourceTree = "<group>"; };
+		FE37E92121A6A40A001BA2FC /* FriendsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FriendsCell.xib; sourceTree = "<group>"; };
 		FE80E6982199245C0015FFCC /* MeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MeViewController.h; sourceTree = "<group>"; };
 		FE80E6992199245C0015FFCC /* MeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MeViewController.m; sourceTree = "<group>"; };
 		FE80E69B219951450015FFCC /* LGUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LGUtils.h; sourceTree = "<group>"; };
@@ -247,8 +255,8 @@
 		FE28BF0B216F27A500CA885B = {
 			isa = PBXGroup;
 			children = (
-				FEA53394218C1C4B00B09A2B /* WCDB_Contact.sqlite */,
 				FEE0BFC7219022CA00CE88CD /* PoemKing.pch */,
+				FEA53394218C1C4B00B09A2B /* WCDB_Contact.sqlite */,
 				FE28BF16216F27A500CA885B /* PoemKing */,
 				FE28BF2F216F27A900CA885B /* PoemKingTests */,
 				FE28BF3A216F27A900CA885B /* PoemKingUITests */,
@@ -310,8 +318,6 @@
 			children = (
 				FE80E6972199244F0015FFCC /* Me */,
 				FE28BF80216F58F500CA885B /* CustomView */,
-				FE28BF51216F3F9C00CA885B /* ChatHistory */,
-				FE28BF50216F3F8D00CA885B /* Friends */,
 				FE28BF4F216F3F7500CA885B /* Home */,
 				FE28BF1D216F27A500CA885B /* Main.storyboard */,
 				FE28BF4B216F2BED00CA885B /* MainTabBarController.h */,
@@ -336,30 +342,15 @@
 		FE28BF4F216F3F7500CA885B /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				FE37E91E21A6A3DB001BA2FC /* Cell */,
 				FEE0BFC4218FF08800CE88CD /* RecoverViewController.h */,
 				FEE0BFC5218FF08800CE88CD /* RecoverViewController.m */,
 				FEE0BFC821904D0E00CE88CD /* AddFileViewController.h */,
 				FEE0BFC921904D0E00CE88CD /* AddFileViewController.m */,
-				FEE0BFE2219183BE00CE88CD /* BackupFileListCell.h */,
-				FEE0BFE3219183BE00CE88CD /* BackupFileListCell.m */,
-				FEE0BFE4219183BE00CE88CD /* BackupFileListCell.xib */,
+				FE37E91B21A69B1C001BA2FC /* FriendsViewController.h */,
+				FE37E91C21A69B1C001BA2FC /* FriendsViewController.m */,
 			);
 			path = Home;
-			sourceTree = "<group>";
-		};
-		FE28BF50216F3F8D00CA885B /* Friends */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Friends;
-			sourceTree = "<group>";
-		};
-		FE28BF51216F3F9C00CA885B /* ChatHistory */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = ChatHistory;
-			path = Find;
 			sourceTree = "<group>";
 		};
 		FE28BF80216F58F500CA885B /* CustomView */ = {
@@ -369,6 +360,19 @@
 				FE28BF82216F594400CA885B /* LatinMarkView.m */,
 			);
 			path = CustomView;
+			sourceTree = "<group>";
+		};
+		FE37E91E21A6A3DB001BA2FC /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				FEE0BFE2219183BE00CE88CD /* BackupFileListCell.h */,
+				FEE0BFE3219183BE00CE88CD /* BackupFileListCell.m */,
+				FEE0BFE4219183BE00CE88CD /* BackupFileListCell.xib */,
+				FE37E91F21A6A40A001BA2FC /* FriendsCell.h */,
+				FE37E92021A6A40A001BA2FC /* FriendsCell.m */,
+				FE37E92121A6A40A001BA2FC /* FriendsCell.xib */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		FE80E6972199244F0015FFCC /* Me */ = {
@@ -646,6 +650,7 @@
 				FE80E748219ABEB30015FFCC /* emptyData.png in Resources */,
 				FE80E702219965090015FFCC /* About.txt in Resources */,
 				FEE0BFE6219183BE00CE88CD /* BackupFileListCell.xib in Resources */,
+				FE37E92321A6A40A001BA2FC /* FriendsCell.xib in Resources */,
 				FEA53395218C1C4B00B09A2B /* WCDB_Contact.sqlite in Resources */,
 				FE80E6FC219965090015FFCC /* README.txt in Resources */,
 				FE28BF1F216F27A500CA885B /* Main.storyboard in Resources */,
@@ -738,7 +743,9 @@
 				FE80E6F4219965090015FFCC /* DDNumber.m in Sources */,
 				FE28BF27216F27A900CA885B /* main.m in Sources */,
 				FE28BF83216F594400CA885B /* LatinMarkView.m in Sources */,
+				FE37E92221A6A40A001BA2FC /* FriendsCell.m in Sources */,
 				FEA53398218C1C8000B09A2B /* SqliteManager.m in Sources */,
+				FE37E91D21A69B1C001BA2FC /* FriendsViewController.m in Sources */,
 				FE80E6F6219965090015FFCC /* DDRange.m in Sources */,
 				FE80E6F2219965090015FFCC /* MultipartMessageHeader.m in Sources */,
 				FE80E69D219951450015FFCC /* LGUtils.m in Sources */,

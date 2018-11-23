@@ -7,11 +7,15 @@
 //
 
 #import "RecoverViewController.h"
+#import "AddFileViewController.h"
+#import "FriendsViewController.h"
 #import "UIScrollView+EmptyDataSet.h"
 #import "Masonry.h"
-#import "AddFileViewController.h"
 #import "BackupFileListCell.h"
 #import "SqliteFile.h"
+#import "SqliteManager.h"
+#import "BinaryDataManager.h"
+#import "WXContacts.h"
 
 
 @interface RecoverViewController ()<DZNEmptyDataSetSource, DZNEmptyDataSetDelegate, UITableViewDataSource, UITableViewDelegate>
@@ -45,15 +49,22 @@
     NSNotificationCenter *notifyCenter = [NSNotificationCenter defaultCenter];
     [notifyCenter addObserver:self selector:@selector(receiveNotification:) name:@"sqlFileAdded" object:nil];
     
+    [self initialPage];
     [self loadDataFromSandBox];
     
 }
 
 
-//- (UIImage *)imageForEmptyDataSet:(UIScrollView *)scrollView{
-//
-//    return [UIImage imageNamed:@""];
-//}
+
+- (void)initialPage{
+    
+    UIBarButtonItem *leftBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addDBFile:)];
+    self.navigationItem.leftBarButtonItem = leftBarButtonItem;
+}
+
+- (void)addDBFile:(UIBarButtonItem *)sender{
+     [self.navigationController pushViewController:[AddFileViewController new] animated:YES];
+}
 
 
 - (UIView *)customViewForEmptyDataSet:(UIScrollView *)scrollView{
@@ -112,11 +123,22 @@
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     
-    BackupFileListCell *cell = [tableView dequeueReusableCellWithIdentifier:@"BackupFileListCell" forIndexPath:indexPath];
     SqliteFile * sqlModel = [self.dataSource objectAtIndex:indexPath.row];
+    
+    BackupFileListCell *cell = [tableView dequeueReusableCellWithIdentifier:@"BackupFileListCell" forIndexPath:indexPath];
     [cell setCellWithModel:sqlModel];
+    [cell.recoverButton addTarget:self action:@selector(recoverFiles:) forControlEvents:UIControlEventTouchUpInside];
     
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    SqliteFile *model = [self.dataSource objectAtIndex:indexPath.row];
+    FriendsViewController *friendsVC = [FriendsViewController new];
+    friendsVC.sqlFile = model;
+    [self.navigationController pushViewController:friendsVC animated:YES];
+
 }
 
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -133,6 +155,8 @@
         
         UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"提示" message:@"您确定删除该条数据？" preferredStyle:UIAlertControllerStyleAlert];
         
+        [alertController addAction:[UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:nil]];
+        
         [alertController addAction:[UIAlertAction actionWithTitle:@"确定"
                                                             style:UIAlertActionStyleDefault
                                                           handler:^(UIAlertAction * _Nonnull action) {
@@ -141,8 +165,9 @@
             //delete file data in sandbox
             NSFileManager *fileManager = [NSFileManager defaultManager];
             if([fileManager fileExistsAtPath:fileNeedDelete.filePath]){
-                [fileManager removeItemAtPath:fileNeedDelete.filePath error:nil];
+                
             }
+            [fileManager removeItemAtPath:fileNeedDelete.filePath error:nil];
             [self.dataSource removeObjectAtIndex:indexPath.row];
             [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationLeft];
     
@@ -156,6 +181,34 @@
     return @"删除";
 }
 
+- (void)recoverFiles:(UIButton *)button{
+    
+    BackupFileListCell *cell = (BackupFileListCell *)[[button superview] superview];
+    NSInteger index = [self.tableview indexPathForCell:cell].row;
+    SqliteFile *model = [self.dataSource objectAtIndex:index];
+  
+  
+    SqliteManager *manager = [SqliteManager sharedSqliteManager];
+    BinaryDataManager *binDataManager = [BinaryDataManager sharedBinDataManager];
+    
+    NSString *dirPath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) firstObject];
+    NSString *dbPath =  [dirPath stringByAppendingPathComponent:model.fileName];
+    
+    if([manager openDBWithDBPath:dbPath]){
+        
+        NSMutableArray *contacts = [manager queryWithSql:@"select * from Friend where type = '3' or type = '7';"];
+        for (WXContacts *contact in contacts) {
+            NSLog(@"UserName : %@ , remark : %@ , headImage: %@",contact.userName,[[binDataManager getRemarkDataBy:contact.dbContactRemark].firstObject stringByRemovingPercentEncoding],[binDataManager getPhotoBy:contact.dbContactHeadImage]);
+            NSLog(@"dbContactLocal :%@",[[NSString alloc]initWithData:contact.dbContactLocal encoding:NSUTF8StringEncoding]);
+            NSLog(@"dbContactOther :%@",[[NSString alloc]initWithData:contact.dbContactOther encoding:NSUTF8StringEncoding]);
+            NSLog(@"dbContactProfile :%@",[[NSString alloc]initWithData:contact.dbContactProfile encoding:NSUTF8StringEncoding]);
+            NSLog(@"dbContactSocial :%@",[[NSString alloc]initWithData:contact.dbContactSocial encoding:NSUTF8StringEncoding]);
+
+        }
+    }
+    
+    
+}
 
 - (void)loadDataFromSandBox{
     
@@ -165,6 +218,7 @@
     for (int i = 0; i < fileList.count; i++) {
         SqliteFile *sqliteFile = [[SqliteFile alloc] init];
         sqliteFile.fileName = fileList[i];
+        NSLog(@"superView %@",fileList[i]);
         [self.dataSource addObject:sqliteFile];
     }
     
